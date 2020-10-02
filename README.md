@@ -19,8 +19,6 @@ dependencies {
 ```
 3. Subclass WakeService and override Intent.doWork()
 ```kotlin
-import com.candroid.bootlaces.BootService
-//BootService is lifecycle aware so you can register an observer
 class MyWakeService : WakeService("MyWakeService"){
     override fun Intent.doWork() {
         //do work
