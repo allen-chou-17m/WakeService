@@ -1,0 +1,3 @@
+include ':wakeservicelib'
+include ':app'
+rootProject.name = "Wake Service"
