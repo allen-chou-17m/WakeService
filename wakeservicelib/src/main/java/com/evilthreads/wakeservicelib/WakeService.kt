@@ -39,7 +39,7 @@ import android.os.PowerManager
 */
 /*implement WakeService and override Intent.doWork()
 * your args will be in the receiver of type Intent*/
-abstract class WakeService(name: String, val wakeTimeout: Long = -1): IntentService(name){
+abstract class WakeService(name: String, val wakeTimeout: Long = -1L): IntentService(name){
     private lateinit var wakeLock: PowerManager.WakeLock
 
     /*override this method and do your work*/
