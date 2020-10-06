@@ -78,6 +78,9 @@ If you don't have an IDE preference we would recommend that you use
 ## Contributors
 This project exists thanks to all the people who contribute.
 <a href="https://github.com/evilthreads669966/wakeservice/graphs/contributors"><img src="https://opencollective.com/wakeservice/contributors.svg?width=890&button=false" /></a>
+## Talking about EvadeMe
+### Articles
+- [An Intent Service That Keeps Your Processor Awake](https://medium.com/@chrisbasinger/wake-service-android-library-e88214ed2990)
 ## License
 ```
 Copyright 2020 Chris Basinger
