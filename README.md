@@ -1,4 +1,4 @@
-[![Release](https://jitpack.io/v/evilthreads669966/wakeservice.svg)](https://jitpack.io/#evilthreads669966/wakeservice)&nbsp;&nbsp;[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=14)
+[![Release](https://jitpack.io/v/evilthreads669966/wakeservice.svg)](https://jitpack.io/#evilthreads669966/wakeservice)&nbsp;&nbsp;[![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=plastic)](https://android-arsenal.com/api?level=14)&nbsp;&nbsp;[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://kotlin.link)
 # Wake Service
 ### An Android library that gives you an Intent Service that keeps your processor awake while doing work.
 ## User Instructions
