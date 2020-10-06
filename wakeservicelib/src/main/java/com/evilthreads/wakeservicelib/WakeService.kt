@@ -17,6 +17,8 @@ import android.app.IntentService
 import android.content.Context
 import android.content.Intent
 import android.os.PowerManager
+import com.evilthreads.wakescopelib.wakeScope
+
 /*
             (   (                ) (             (     (
             )\ ))\ )    *   ) ( /( )\ )     (    )\ )  )\ )
@@ -47,25 +49,13 @@ abstract class WakeService(name: String, val wakeTimeout: Long = -1): IntentServ
 
     /*do not override this*/
     override fun onHandleIntent(intent: Intent?) {
-        startWakeLock()
-        intent?.doWork()
-        stopWakeLock()
-        stopSelf()
-    }
-
-    /*acquire wakelock*/
-    private fun startWakeLock(){
-        val mgr = this.getSystemService(Context.POWER_SERVICE) as PowerManager
-        wakeLock = mgr.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "$packageName.wakelock")
-        if(wakeTimeout != -1L)
-            wakeLock.acquire(wakeTimeout)
+        if(wakeTimeout == -1L)
+            wakeScope {
+                intent?.doWork()
+            }
         else
-            wakeLock.acquire()
-    }
-
-    /*release wakelock*/
-    private fun stopWakeLock(){
-        if(wakeLock.isHeld)
-            wakeLock.release()
+            wakeScope(wakeTimeout) {
+                intent?.doWork()
+            }
     }
 }
